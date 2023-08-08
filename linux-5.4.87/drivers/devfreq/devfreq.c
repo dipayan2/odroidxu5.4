@@ -1257,7 +1257,7 @@ static ssize_t target_freq_show(struct device *dev,
 }
 static DEVICE_ATTR_RO(target_freq);
 
-/* Start
+/* Start Added Util
 	[CRAVE] Check the utilizaiton of the device
 */
 
