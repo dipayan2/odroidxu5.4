@@ -41,7 +41,7 @@ static int devfreq_simple_ondemand_func(struct devfreq *df,
 	    dfso_upthreshold < dfso_downdifferential)
 		return -EINVAL;
 
-	pr_info("Exynos, busy,%lu, total,%lu, freq,%lu, poll,%u\n",stat->busy_time,stat->total_time,df->previous_freq,df->profile->polling_ms);
+	//pr_info("Exynos, busy,%lu, total,%lu, freq,%lu, poll,%u\n",stat->busy_time,stat->total_time,df->previous_freq,df->profile->polling_ms);
 
 	/* Assume MAX if it is going to be divided by zero */
 	if (stat->total_time == 0) {
