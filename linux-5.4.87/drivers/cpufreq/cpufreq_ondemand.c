@@ -141,7 +141,7 @@ static void od_update(struct cpufreq_policy *policy)
 
 	dbs_info->freq_lo = 0;
 	
-	pr_info("Exynos,CPU,%u,load,%u,freq,%u\n",policy->cpu, load,policy->cur);
+	//pr_info("Exynos,CPU,%u,load,%u,freq,%u\n",policy->cpu, load,policy->cur);
 	/* Check for frequency increase */
 	if (load > dbs_data->up_threshold) {
 		/* If switching to max speed, apply sampling_down_factor */
