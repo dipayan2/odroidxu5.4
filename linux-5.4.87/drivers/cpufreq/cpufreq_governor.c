@@ -224,7 +224,7 @@ unsigned int dbs_update(struct cpufreq_policy *policy)
 	}
 
 	policy_dbs->idle_periods = idle_periods;
-
+	policy->util = max_load;
 	return max_load;
 }
 EXPORT_SYMBOL_GPL(dbs_update);
