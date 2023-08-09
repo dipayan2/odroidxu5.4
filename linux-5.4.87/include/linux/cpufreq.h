@@ -48,6 +48,8 @@ struct cpufreq_cpuinfo {
 	unsigned int		transition_latency;
 };
 
+// [CRAVE] Update this data structure and create a new sysfs for load
+
 struct cpufreq_policy {
 	/* CPUs sharing clock, require sw coordination */
 	cpumask_var_t		cpus;	/* Online CPUs only */
