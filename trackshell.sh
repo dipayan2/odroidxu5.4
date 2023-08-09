@@ -1,0 +1,1 @@
+watch -n 0.1 'date +%s.%N >> out4 && cat /proc/stat | head -1 >> out4 && cat /sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq >> out4'
