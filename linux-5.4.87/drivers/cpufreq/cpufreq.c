@@ -683,7 +683,7 @@ show_one(cpuinfo_max_freq, cpuinfo.max_freq);
 show_one(cpuinfo_transition_latency, cpuinfo.transition_latency);
 show_one(scaling_min_freq, min);
 show_one(scaling_max_freq, max);
-show_one(util,max);
+show_one(util,util);
 
 __weak unsigned int arch_freq_get_on_cpu(int cpu)
 {

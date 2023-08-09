@@ -360,7 +360,7 @@ static struct policy_dbs_info *alloc_policy_dbs_info(struct cpufreq_policy *poli
 	policy_dbs = gov->alloc();
 	if (!policy_dbs)
 		return NULL;
-
+	policy->util = 0;
 	policy_dbs->policy = policy;
 	mutex_init(&policy_dbs->update_mutex);
 	atomic_set(&policy_dbs->work_count, 0);
