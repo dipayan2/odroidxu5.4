@@ -1265,7 +1265,15 @@ static ssize_t utilization_show(struct device *dev,
 				struct device_attribute *attr, char *buf)
 {
 	struct devfreq *df = to_devfreq(dev);
-	return sprintf(buf, "%lu,%lu\n", df->last_status.busy_time,df->last_status.total_time);
+	unsigned int devutil;
+	if (df->last_status.total_time == 0){
+		devutil = 0;
+	}
+	else{
+	devutil = div_u64(df->last_status.busy_time*100,df->last_status.total_time);
+	}
+	// return sprintf(buf, "%lu,%lu\n", df->last_status.busy_time,df->last_status.total_time);
+	return sprintf(buf, "%u\n", devutil);
 }
 static DEVICE_ATTR_RO(utilization);
 
